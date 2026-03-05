@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erick Daniel Banner</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .banner {
+    width: 860px;
+    height: 220px;
+    background: #000000;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Subtle grid */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+  }
+
+  /* Diagonal fade accent */
+  .slash {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 38%,
+      rgba(255,255,255,0.025) 38.5%,
+      rgba(255,255,255,0.025) 39%,
+      transparent 39.5%
+    );
+    pointer-events: none;
+  }
+
+  /* Left white bar accent */
+  .left-bar {
+    position: absolute;
+    left: 48px;
+    top: 36px;
+    bottom: 36px;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #ffffff, transparent);
+  }
+
+  /* Content */
+  .content {
+    position: absolute;
+    left: 68px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: #ffffff;
+    line-height: 0.92;
+    letter-spacing: 4px;
+  }
+
+  .name .last {
+    color: rgba(255,255,255,0.65);
+    font-size: 42px;
+    display: block;
+    letter-spacing: 8px;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  .tab {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    padding: 5px 14px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-right: none;
+    cursor: default;
+  }
+
+  .tab:first-child { border-radius: 4px 0 0 4px; }
+  .tab:last-child  { border-radius: 0 4px 4px 0; border-right: 1px solid rgba(255,255,255,0.1); }
+
+  .tab.active {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+  }
+
+  /* Right illustration area */
+  .right-img {
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.85;
+  }
+
+  /* Divider line between content and image */
+  .divider {
+    position: absolute;
+    right: 220px;
+    top: 30px;
+    bottom: 30px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.12), transparent);
+  }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="grid"></div>
+    <div class="slash"></div>
+    <div class="left-bar"></div>
+    <div class="divider"></div>
+
+    <div class="content">
+      <div class="label">Portfolio · GitHub</div>
+      <div class="name">
+        Erick
+        <span class="last">Daniel</span>
+      </div>
+      <div class="tabs">
+        <div class="tab active">Student</div>
+        <div class="tab">Systems Engineer</div>
+        <div class="tab">Data Analysis</div>
+      </div>
+    </div>
+
+    <!-- Small tech SVG illustration -->
+    <div class="right-img">
+      <svg width="148" height="148" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Monitor frame -->
+        <rect x="14" y="16" width="108" height="76" rx="7" stroke="white" stroke-opacity="0.55" stroke-width="2" fill="none"/>
+        <!-- Screen -->
+        <rect x="22" y="24" width="92" height="60" rx="3" fill="rgba(255,255,255,0.04)" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+
+        <!-- Code lines -->
+        <line x1="30" y1="36" x2="60" y2="36" stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="30" y1="45" x2="82" y2="45" stroke="white" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="30" y1="54" x2="66" y2="54" stroke="white" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="30" y1="63" x2="75" y2="63" stroke="white" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="30" y1="72" x2="52" y2="72" stroke="white" stroke-opacity="0.35" stroke-width="1.5" stroke-linecap="round"/>
+
+        <!-- Blinking cursor -->
+        <rect x="54" y="68" width="5" height="9" rx="1" fill="white" fill-opacity="0.75">
+          <animate attributeName="opacity" values="0.75;0;0.75" dur="1.2s" repeatCount="indefinite"/>
+        </rect>
+
+        <!-- Mini bar chart (data analysis) -->
+        <rect x="88" y="57" width="7" height="20" rx="1.5" fill="white" fill-opacity="0.25"/>
+        <rect x="98" y="63" width="7" height="14" rx="1.5" fill="white" fill-opacity="0.45"/>
+        <rect x="108" y="50" width="7" height="27" rx="1.5" fill="white" fill-opacity="0.18"/>
+
+        <!-- Stand stem -->
+        <line x1="68" y1="92" x2="68" y2="110" stroke="white" stroke-opacity="0.35" stroke-width="2"/>
+        <!-- Stand base -->
+        <line x1="50" y1="110" x2="86" y2="110" stroke="white" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Corner dots -->
+        <circle cx="14" cy="16" r="2.5" fill="white" fill-opacity="0.25"/>
+        <circle cx="122" cy="16" r="2.5" fill="white" fill-opacity="0.25"/>
+        <circle cx="14" cy="92" r="2.5" fill="white" fill-opacity="0.25"/>
+        <circle cx="122" cy="92" r="2.5" fill="white" fill-opacity="0.25"/>
+
+        <!-- Small floating data dots -->
+        <circle cx="134" cy="30" r="2" fill="white" fill-opacity="0.2"/>
+        <circle cx="140" cy="48" r="1.5" fill="white" fill-opacity="0.12"/>
+        <circle cx="136" cy="65" r="2" fill="white" fill-opacity="0.16"/>
+        <circle cx="8" cy="40" r="1.5" fill="white" fill-opacity="0.12"/>
+        <circle cx="6" cy="60" r="2" fill="white" fill-opacity="0.1"/>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
